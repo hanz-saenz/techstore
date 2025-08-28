@@ -1,0 +1,56 @@
+
+/* fuente */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --font-color: #333;
+    --background-color: #f1e5ce;
+    --color-error: #ff0000;
+    --color-success: #4CAF50;
+}
+
+/* body */
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* estilos del header */
+.header {
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 8px #333;
+}
+.header__logo img {
+    height: 60px;
+    width: 60px;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.header__nav-link {
+    color: #1e5484;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+.header__nav-link:hover {
+    color:#77a937;
+    transform: scale(1.05);
+    font-weight: bold;
+    
+}

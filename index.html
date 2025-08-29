@@ -7,18 +7,10 @@
         <title>Tech Store</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/banner.css">
-        
-        <!-- bootstrap -->
-         
-
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-
+        <link rel="stylesheet" href="assets/css/destacados.css">
         <style>
             
-            
-
+         
         </style>
     </head>
     <body>
@@ -35,64 +27,49 @@
                 </ul>
             </nav>
         </header>
-
-        <!-- banner -->
-
-        <!-- <section class="banner">
-            <div class="container">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="assets/imagenes/banner-primero.avif" alt="Los Angeles">
-                    </div>
-
-                    <div class="item">
-                        <img src="assets/imagenes/banner (1).jpg" alt="Chicago">
-                    </div>
-                    
-                    <div class="item">
-                        <img src="assets/imagenes/banner (2).jpg" alt="New york">
-                    </div>
-                    </div>
-
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                </div>
-
-        </section> -->
-
         <section class="banner">
 
             <div class="banner__carousel">
                 <img src="assets/imagenes/banner-primero.avif" alt="Los Angeles" class="banner__imagen banner__imagen--active">
                 <img src="assets/imagenes/banner (1).jpg" alt="Chicago" class="banner__imagen">
                 <img src="assets/imagenes/banner (2).jpg" alt="New york" class="banner__imagen">
-                <button class="banner__boton banner__boton--prev"> < </button>
-                <button class="banner__boton banner__boton--next"> > </button>
+                <button class="banner__boton banner__boton--prev"> <img src="assets/imagenes/prev.svg" alt="Flecha izquierda"> </button>
+                <button class="banner__boton banner__boton--next"> <img src="assets/imagenes/next.svg" alt="Flecha derecha"> </button>
+            </div>
+
+            <div class="banner__content">
+                <h1 class="banner__title">¡Nuestras ofertas exclusivas!</h1>
+                <a href="productos.html" class="banner__button">Ver ofertas</a>
             </div>
 
         </section>
         
-        <section>
+        <section class="destacados">
 
 
-            <h1>Bienvenido a Tech Store</h1>
-            <p>Tu tienda de tecnología en línea.</p>
+            <h2 class="destacados__title">Productos Destacados</h2>
+            <div class="destacados__grid">
+                <!-- lista de productos destacados -->
+            </div>
         </section>
+
+        <footer>
+            <div class="footer__content">
+                <p>&copy; 2025 Tech Store. Todos los derechos reservados.</p>
+                <p>Proyecto realizado con: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong></p>
+                <div class="footer__links">
+                    <a href="index.html" target="_blank">Index</a> |
+                    <a href="productos.html" target="_blank">Productos</a> |
+                    <a href="carrito.html" target="_blank">Carrito</a> |
+                    <a href="contacto.html" target="_blank">Contacto</a>
+                </div>
+                <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
+            </div>
+        </footer>
         <script src="assets/js/banner.js"></script>
+        <script src="assets/js/productos.js"></script>
+        <script src="assets/js/carrito.js"></script>
+        <script src="assets/js/destacados.js"></script>
     </body>
 
 </html>

@@ -1,11 +1,11 @@
-.destacados__title{
+.destacados__title, .lista-productos__titulo{
 
 text-align: center;
 font-size: 2rem;
 color: var(--color-text);
 }
 
-.destacados__grid {
+.destacados__grid, .productos__grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 gap: 20px;
@@ -54,7 +54,7 @@ color: var(--color-text);
 }
 
 .producto__boton {
-background-color: #6f9fc9;
+background-color: var(--color-style-principal);
 color: white;
 padding: 8px;
 border: none;
@@ -71,4 +71,27 @@ transform: scale(1.05);
 .producto__boton:disabled {
 background-color: grey;
 cursor: not-allowed;
+}
+
+.mensaje {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-style-principal);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    animation: slice-in 0.5s ease-in-out
+}
+
+@keyframes slice-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

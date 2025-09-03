@@ -7,6 +7,19 @@
         <title>Tech Store</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/footer.css">
+        <style>
+        .carrito__productos {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;  
+        }
+
+        .carrito__item {
+            display: flex;
+            align-items: center;
+           
+        }
+        </style>
     </head>
     <body>
         <header class="header">
@@ -23,7 +36,19 @@
             </nav>
         </header>
 
+        <section class="carrito">
+            <h2 class="carrito__titulo">Tu Carrito</h2>
+            <div class="carrito__productos">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div class="carrito_total">
+                <p>Subtotal: <span id="subtotal">0</span> $</p>
+                <p>IVA (19%): <span id="iva">0</span> $</p>
+                <p>Total: <span id="total">0</span> $</p>
+            </div>
+        </section>
 
+        <div class="mensaje" id="mensaje"></div>
         <footer>
             <div class="footer__content">
                 <p>&copy; 2025 Tech Store. Todos los derechos reservados.</p>
@@ -37,6 +62,37 @@
                 <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
             </div>
         </footer>
+        <script>
+            let itemsCarrito = document.querySelector(".carrito__productos");
+            let subtotal = document.getElementById("subtotal");
+            let iva = document.getElementById("iva");
+            let total = document.getElementById("total");
+
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            
+            function mostrarCarrito() {
+                let suma = 0;
+                itemsCarrito.innerHTML="";
+                carrito.forEach((producto, index) => {
+                    suma += producto.precio * producto.cantidad;
+                    itemsCarrito.innerHTML += `
+                        <div class="carrito__item">
+                            <img src="${producto.imagen}" alt="${producto.nombre}" class="carrito__item-imagen">
+                            <div class="carrito__item-info">
+                                <span>${producto.nombre}</span>
+                                <span>$${producto.precio} x ${producto.cantidad}</span>
+
+                            </div>
+                        </div>
+                    `;
+                });
+
+                subtotal.textContent = suma.toFixed(2);
+                iva.textContent = (suma * 0.19).toFixed(2);
+                total.textContent = (suma * 1.19).toFixed(2);
+            }
+            mostrarCarrito();
+        </script>
 
     </body>
 

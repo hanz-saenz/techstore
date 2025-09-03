@@ -7,6 +7,13 @@
         <title>Tech Store</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/destacados.css">
+        <link rel="stylesheet" href="assets/css/productos.css">
+        <style>
+
+            
+
+        </style>
     </head>
     <body>
         <header class="header">
@@ -24,6 +31,23 @@
         </header>
 
 
+        <section class="lista-productos">
+            <h2 class="lista-productos__titulo">Nuestros productos</h2>
+            <div class="lista-productos__filtro">
+                <select id="filtro-producto" multiple  onchange="mostrarProductosSeleccionados()">
+                    <option value="todos">Todos</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="perifericos">Periféricos</option>
+                    <option value="gamer">Gamer</option>
+                    <option value="oficina">Oficina</option>
+                </select>
+            </div>
+            <div class="productos__grid">
+                <!-- mostrar los productos -->
+            </div>
+            <div class="mensaje" id="mensaje"></div>
+        </section>
+
         <footer>
             <div class="footer__content">
                 <p>&copy; 2025 Tech Store. Todos los derechos reservados.</p>
@@ -37,6 +61,8 @@
                 <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
             </div>
         </footer>
+        <script src="assets/js/productos.js"></script>
+        <script src="assets/js/carrito.js"></script>
     </body>
 
 </html>

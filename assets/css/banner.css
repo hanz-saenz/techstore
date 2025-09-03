@@ -67,7 +67,7 @@
 }
 
 .banner__button {
-    background-color: #6f9fc9;
+    background-color: var(--color-style-principal);
     color: white;
     padding: 10px 20px;
     text-decoration: none;

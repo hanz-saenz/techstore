@@ -6,13 +6,8 @@
         <link rel="icon" type="image/x-icon" href="assets/imagenes/icono.ico">
         <title>Tech Store</title>
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/banner.css">
-        <link rel="stylesheet" href="assets/css/destacados.css">
         <link rel="stylesheet" href="assets/css/footer.css">
-        <style>
-            
-         
-        </style>
+        <link rel="stylesheet" href="assets/css/registro.css">
     </head>
     <body>
         <header class="header">
@@ -30,31 +25,27 @@
                 </ul>
             </nav>
         </header>
-        <section class="banner">
-
-            <div class="banner__carousel">
-                <img src="assets/imagenes/banner-primero.avif" alt="Los Angeles" class="banner__imagen banner__imagen--active">
-                <img src="assets/imagenes/banner (1).jpg" alt="Chicago" class="banner__imagen">
-                <img src="assets/imagenes/banner (2).jpg" alt="New york" class="banner__imagen">
-                <button class="banner__boton banner__boton--prev"> <img src="assets/imagenes/prev.svg" alt="Flecha izquierda"> </button>
-                <button class="banner__boton banner__boton--next"> <img src="assets/imagenes/next.svg" alt="Flecha derecha"> </button>
-            </div>
-
-            <div class="banner__content">
-                <h1 class="banner__title">¡Nuestras ofertas exclusivas!</h1>
-                <a href="productos.html" class="banner__button">Ver ofertas</a>
-            </div>
-
-        </section>
         
-        <section class="destacados">
+        
+        <section class="registro">
 
+            <div>
+                <h2 class="registro__title">Registro de Usuario</h2>
+                <form id="registro__form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Registrarse</button>
+                </form>
+                <div id="registro__resultado"></div>
 
-            <h2 class="destacados__title">Productos Destacados</h2>
-            <div class="destacados__grid">
-                <!-- lista de productos destacados -->
-            </div>
-            <div class="mensaje" id="mensaje"></div>
+            </div>    
         </section>
 
         <footer>
@@ -70,10 +61,7 @@
                 <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
             </div>
         </footer>
-        <script src="assets/js/banner.js"></script>
-        <script src="assets/js/productos.js"></script>
-        <script src="assets/js/carrito.js"></script>
-        <script src="assets/js/destacados.js"></script>
+       <script src="assets/js/registro.js"></script>
     </body>
 
 </html>

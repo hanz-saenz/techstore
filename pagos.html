@@ -6,13 +6,10 @@
         <link rel="icon" type="image/x-icon" href="assets/imagenes/icono.ico">
         <title>Tech Store</title>
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/banner.css">
-        <link rel="stylesheet" href="assets/css/destacados.css">
         <link rel="stylesheet" href="assets/css/footer.css">
-        <style>
-            
-         
-        </style>
+
+        <link rel="stylesheet" href="assets/css/pagos.css">
+
     </head>
     <body>
         <header class="header">
@@ -30,31 +27,42 @@
                 </ul>
             </nav>
         </header>
-        <section class="banner">
 
-            <div class="banner__carousel">
-                <img src="assets/imagenes/banner-primero.avif" alt="Los Angeles" class="banner__imagen banner__imagen--active">
-                <img src="assets/imagenes/banner (1).jpg" alt="Chicago" class="banner__imagen">
-                <img src="assets/imagenes/banner (2).jpg" alt="New york" class="banner__imagen">
-                <button class="banner__boton banner__boton--prev"> <img src="assets/imagenes/prev.svg" alt="Flecha izquierda"> </button>
-                <button class="banner__boton banner__boton--next"> <img src="assets/imagenes/next.svg" alt="Flecha derecha"> </button>
-            </div>
+        <section class="pagos">
+           <div class="pagos__formulario" id="pagos__formulario">
+                <h2> INFORMACIÓN DE PAGOS</h2>
+                <form>
+                    <div>
+                        <label>Nombre en la tarjeta:</label>
+                    <input class="pagos__input" type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label>Número en la tarjeta:</label>
+                        <input class="pagos__input" type="text" id="numero" name="numero" maxlength="19" required>
+                    </div>
+                    <div>
+                        <label>Fecha de expiración:</label>
+                        <input class="pagos__input" type="text" id="fecha-expiracion" maxlength="5" name="fecha-expiracion" required>
+                    </div>
+                    <div>
+                        <label>Código de seguridad (CVV):</label>
+                        <input class="pagos__input" type="text" id="codigo-seguridad" maxlength="3" name="codigo-seguridad" required>
+                    </div>
 
-            <div class="banner__content">
-                <h1 class="banner__title">¡Nuestras ofertas exclusivas!</h1>
-                <a href="productos.html" class="banner__button">Ver ofertas</a>
-            </div>
+                    <div class="pagos__botones">
+                        <button type="submit" id="pagos__boton">Pagar</button>
+                        <button type="button" onclick="window.location.href='carrito.html'">Volver al carrito</button>
+                    </div>
+                </form>
 
-        </section>
-        
-        <section class="destacados">
+           </div>
 
-
-            <h2 class="destacados__title">Productos Destacados</h2>
-            <div class="destacados__grid">
-                <!-- lista de productos destacados -->
-            </div>
-            <div class="mensaje" id="mensaje"></div>
+           <div class="pagos__confirmacion" id="pagos__confirmacion">
+                <h2>¡Gracias por tu compra!</h2>
+                <p>Tu pago ha sido realizado con éxito.</p>
+                <p id="pago__orden"></p>
+                <button class="pagos__botones-inicio" type="button" onclick="window.location.href='index.html'">Volver al inicio</button>
+           </div>
         </section>
 
         <footer>
@@ -70,10 +78,7 @@
                 <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
             </div>
         </footer>
-        <script src="assets/js/banner.js"></script>
-        <script src="assets/js/productos.js"></script>
-        <script src="assets/js/carrito.js"></script>
-        <script src="assets/js/destacados.js"></script>
+        <script src="assets/js/pagos.js"></script>
     </body>
 
 </html>

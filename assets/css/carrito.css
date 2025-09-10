@@ -1,0 +1,151 @@
+        .carrito {
+            margin: 50px auto;
+        padding: 0 20px;
+        max-width: 85%;
+        }
+
+        .carrito__titulo {
+           font-size: 45px;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+
+        .carrito__productos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px; 
+        }
+
+        .carrito__item {
+            display: flex;
+            align-items: center;
+            background-color: #f1e5ce;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+        .carrito__item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .carrito__item-imagen {
+            width: 20%;
+            height: 20%;
+            object-fit: contain;
+            padding: 9px;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+
+        .carrito__item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+            flex-grow: 1;
+        }
+
+        .carrito__item-info span:first-child, .carrito__item-cantidad span {
+                font-size: 18px;
+                font-weight: 600;
+        }
+
+        .carrito__item-info span:last-child {
+            font-size: 16px;
+            color: #7a7878;
+        }
+
+        .carrito__item-cantidad {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 20px;
+                }
+
+        .carrito__item-cantidad button {
+            display: flex;
+            align-items: center;
+            border-radius: 20%;
+            border: 1px solid #777575;
+            background: #a9bfc9;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+                }
+
+        .carrito__item-cantidad button:hover {
+            transform: scale(1.1);
+        }
+
+        .carrito__item-eliminar {
+            background-color: #ce5050b8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .carrito__item-eliminar:hover {
+            background-color: #ce5050;
+        }
+
+        .carrito_total {
+            background: linear-gradient(135deg, #324f5c, #a9bfc9);
+            border-radius: 20px;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+        }
+
+        .carrito_total p {
+            font-size: 20px;
+            margin: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .carrito_total p:last-child {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid;
+        }
+
+        .carrito__seguir-comprando, .carrito__pagar {
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: var(--color-style-principal);
+        }  
+        .carrito__seguir-comprando:hover {
+            background-color: #a0b6c1;
+        }
+
+        .carrito__pagar{
+            background-color: #4CAF50;
+        }
+        .carrito__pagar:hover {
+            background-color: #92d995;
+        }
+        .carrito__botones {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }

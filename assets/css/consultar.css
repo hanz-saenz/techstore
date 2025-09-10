@@ -1,0 +1,76 @@
+.ordenes {
+                padding: 30px;
+                max-width: 70%;
+                margin: 60px auto;
+                background: #f1e5ce;
+                border-radius: 20px;
+                box-shadow: 0 5px 15px rgb(0, 0, 0);
+            }
+            .ordenes__title {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 2em;
+                padding-bottom: 10px;
+            }
+
+            #ordenes__form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+
+            #ordenes__form label {
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 12px 15px;
+            }
+
+            #ordenes__form input {
+                min-width: 25%;
+                padding: 12px 15px;
+                border-radius: 12px;
+                font-size: 1rem;
+            }
+
+            #ordenes__form button {
+                padding: 12px 15px;
+                border: none;
+                border-radius: 12px;
+                background: var(--color-style-principal);
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            #ordenes__form button:hover {
+                background: #77a937;
+                
+            }
+
+            #ordenes__resultado {
+                display: none;
+                padding: 20px;
+                margin-top: 25px;
+                background: #6f9fc9;
+                font-size: 18px;
+                box-shadow: 0 5px 15px rgb(0, 0, 0);
+                border-radius: 12px;
+            }
+
+            #ordenes__resultado table {
+                margin-top: 15px;
+                border-collapse: collapse;
+            }
+            #ordenes__resultado th,
+            #ordenes__resultado td {
+                background: #272725;
+                color: white;
+                padding: 8px;
+                text-align: center;
+            }
+
+            #ordenes__resultado td {
+                font-size: 16px;;
+            }

@@ -10,11 +10,6 @@
         <link rel="stylesheet" href="assets/css/destacados.css">
         <link rel="stylesheet" href="assets/css/productos.css">
 
-        <style>
-
-            
-
-        </style>
     </head>
     <body>
         <header class="header">
@@ -27,28 +22,43 @@
                     <li><a href="productos.html" class="header__nav-link">Productos</a></li>
                     <li><a href="carrito.html" class="header__nav-link">Carrito</a></li>
                     <li><a href="contacto.html" class="header__nav-link">Contacto</a></li>
-                    <li><a href="registro.html" class="header__nav-link">Registrarse</a></li>
-                    <li><a href="login.html" class="header__nav-link">Login</a></li>
+                    <li id="registro"><a href="registro.html" class="header__nav-link" >Registrarse</a></li>
+                    <li id="login"><a href="login.html" class="header__nav-link">Login</a></li>
+                    <li id="admin"><a href="admin.html" class="header__nav-link">Admin</a></li>
+                    <li id="cerrar-sesion"><a href="" class="header__nav-link">Cerrar Sesión</a></li>
                 </ul>
+                <button class="header__nav-toggle" aria-label="Abrir menu">
+                    &#9776;
+                </button>
             </nav>
         </header>
 
 
-        <section class="lista-productos">
-            <h2 class="lista-productos__titulo">Nuestros productos</h2>
-            <div class="lista-productos__filtro">
-                <select id="filtro-producto" multiple  onchange="mostrarProductosSeleccionados()">
-                    <option value="todos" selected>Todos</option>
-                    <option value="tecnologia">Tecnología</option>
-                    <option value="perifericos">Periféricos</option>
-                    <option value="gamer">Gamer</option>
-                    <option value="oficina">Oficina</option>
-                </select>
+        <section class="contenedor">
+            <div class="usuario-info">
+                <h2>Informacion de Usuario</h2>
+                <p><strong>Nombre: </strong><span id="nombre"></span></p>
+                <p><strong>Email: </strong><span id="email"></span></p>
             </div>
-            <div class="productos__grid">
-                <!-- mostrar los productos -->
+            <div class="orden-info">
+                <h2>Información de Órdenes</h2>
+                <p><strong>ID Orden: </strong><span id="id-orden"></span></p>
+                <p><strong>Fecha: </strong><span id="fecha-orden"></span></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detalles-orden">
+                        <!-- Detalles de la orden se insertarán aquí -->
+                    </tbody>
+                </table>
             </div>
-            <div class="mensaje" id="mensaje"></div>
+          
         </section>
 
         <footer>
@@ -62,11 +72,17 @@
                     <a href="contacto.html" target="_blank">Contacto</a>
                 </div>
                 <p>Repositorio: <a href="https://github.com/hanz-saenz/techstore" target="_blank">GitHub</a></p>
+                <a href="assets/docs/provacidad.pdf" target="_blank" class="contacto-mapa-link">Política de privacidad</a>
+                <a href="assets/docs/datos.pdf" target="_blank" class="contacto-mapa-link">Tratamiento de datos</a>
             </div>
         </footer>
-        <script src="assets/js/productos.js"></script>
-        <script src="assets/js/lista_productos.js"></script>
-        <script src="assets/js/carrito.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script src="assets/js/admin.js"></script>
+
+        <script>
+            
+
+        </script>
     </body>
 
 </html>

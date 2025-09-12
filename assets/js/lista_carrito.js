@@ -2,7 +2,7 @@ let itemsCarrito = document.querySelector(".carrito__productos");
             let subtotal = document.getElementById("subtotal");
             let iva = document.getElementById("iva");
             let total = document.getElementById("total");
-
+            let btonPagos = document.getElementById("boton_carrito__pagar");
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
             
             function mostrarCarrito() {
@@ -37,6 +37,9 @@ let itemsCarrito = document.querySelector(".carrito__productos");
 
             if (carrito.length === 0) {
                 itemsCarrito.innerHTML = "<p>Tu carrito está vacío.</p>";
+                btonPagos.disabled = true;
+                btonPagos.classList.remove("carrito_pagar_habilitado");
+                btonPagos.classList.add("carrito_pagar_deshabilitado");
             } else {
                 mostrarCarrito();
             }

@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     botonpagos.textContent = "Procesando...";
                     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
                     const orden = guardarOrden(carrito);
+                    localStorage.removeItem("carrito");
                     setTimeout(() => {
                         formulario.style.display = "none";
                         confirmacion.style.display = "block";

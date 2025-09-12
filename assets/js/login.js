@@ -21,6 +21,7 @@
                 if (email === usuarios.email && password === usuarios.password) {
                     mensajeDiv.style.color = 'green';
                     mensajeDiv.textContent = 'Inicio de sesión exitoso. Redirigiendo...';
+                    localStorage.setItem('logueado', 'true');
                     setTimeout(() => {
                         window.location.href = 'admin.html';
                     }, 2000);

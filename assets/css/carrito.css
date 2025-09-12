@@ -149,3 +149,7 @@
             justify-content: space-around;
             margin-top: 30px;
         }
+
+        .carrito_pagar_deshabilitado,.carrito_pagar_deshabilitado:hover {
+            background-color: grey;
+        }
